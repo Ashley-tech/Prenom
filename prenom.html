@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Prénom à taper</title>
+	</head>
+	<body>
+		<form>
+			<input type="text" placeholder="Tape ton prénom" id="nom">
+			<input type="submit" onclick="getValue();" />
+		</form>
+    
+		<script>
+			function getValue() {
+				// Sélectionner l'élément input et récupérer sa valeur
+				var input = document.getElementById("nom").value;
+				var prenom = input.charAt(0).toUpperCase() + input.substring(1).toLowerCase();
+				// Afficher la valeur
+				if (prenom == "Franck") {
+					document.write(prenom + ', tu es peu supportable !');
+				} else {
+					document.write(prenom + ', tu es très supportable !');
+				}
+				document.write("<br /><br /> Rafraichi ton navigateur pour recommencer");
+			}
+		</script>
+	</body>
+</html>
